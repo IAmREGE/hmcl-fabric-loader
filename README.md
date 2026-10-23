@@ -49,7 +49,7 @@ Because HMCL is **unobfuscated**, compilation and runtime identifiers (classes, 
    ./gradlew assemble
    ```
    * **Standalone Loader (FatJar, fully offline)**: `provider/build/libs/hmcl-fabric-loader-1.0.0-all.jar` (~6.0 MB)
-   * **Lightweight Bootstrapper (downloads dependencies on first run)**: `provider/build/libs/hmcl-fabric-bootstrapper-1.0.0.jar` (~24 KB)
+   * **Lightweight Bootstrapper (downloads dependencies on first run)**: `provider/build/libs/hmcl-fabric-bootstrapper-1.0.0.jar` (~30 KB)
 
 2. **Launch HMCL (Zero Configuration)**:
    Place the loader JAR and your `HMCL-x.y.z.jar` in the same directory, and put mods into `.hmcl/mods/` (or `mods/`):
@@ -74,7 +74,7 @@ Because HMCL is **unobfuscated**, compilation and runtime identifiers (classes, 
 
 ### 项目结构
 
-* **`:provider`**：实现 `HmclGameProvider`（`GameProvider` ID 为 `"hmcl"`），支持打包为离线 FatJar（`hmcl-fabric-loader-1.0.0-all.jar`）或 24 KB 轻量级引导器（`hmcl-fabric-bootstrapper-1.0.0.jar`）。
+* **`:provider`**：实现 `HmclGameProvider`（`GameProvider` ID 为 `"hmcl"`），支持打包为离线 FatJar（`hmcl-fabric-loader-1.0.0-all.jar`）或约 30 KB 轻量级引导器（`hmcl-fabric-bootstrapper-1.0.0.jar`）。
 * **`hmcl-mod-menu`**：参考 Minecraft Mod Menu 实现的独立 HMCL 模组浏览器，在左侧边栏“通用”分类下无缝注入“Fabric 模组”管理界面。
 * **`hmcl-example-mod`**：面向未混淆 HMCL 的标准示例 Fabric Mod 与 Mixin 模组模板工程。
 * **`hmcl-i18n-merger`**：专为 HMCL 打造的 Fabric 基础国际化合并模组，打通多模组与 HMCL 原生 `ResourceBundle`。
