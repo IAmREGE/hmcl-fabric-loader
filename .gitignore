@@ -1,0 +1,13 @@
+.vscode/
+.idea/
+.gradle/
+.project/
+bin/
+build/
+out/
+run/
+__pycache__/
+*.jar
+*.iml
+!gradle-wrapper.jar
+fabricloader.log
